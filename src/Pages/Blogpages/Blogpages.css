@@ -1,0 +1,12 @@
+.blog-container{
+    width: 90%;
+    border: 1px solid black;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.blog-left{
+    border: 1px solid brown;
+}
+.blog-right{
+    border: 1px solid gray;
+}

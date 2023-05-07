@@ -21,7 +21,7 @@ const Headers = () => {
             <Link className='nav-item' to='/about'>About</Link>
             <Link className='nav-item' to='/home'>Services</Link>
             <Link className='nav-item' to='/home'>Contact</Link>
-            <Link className='nav-item' to='/home'>Blog</Link>
+            <Link className='nav-item' to='/blog'>Blog</Link>
           </Nav>
         </Navbar.Collapse>
         <Navbar.Collapse className="justify-content-end">

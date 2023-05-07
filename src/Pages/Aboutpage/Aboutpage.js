@@ -4,6 +4,8 @@ import image from '../../../src/images/doctorprofile.jpg'
 import { Link } from 'react-router-dom';
 import { BiTime} from "react-icons/bi";
 import { TfiMobile} from "react-icons/tfi";
+import { MdOutlineEmail} from "react-icons/md";
+import { SlCalender} from "react-icons/sl";
 const Aboutpage = () => {
     return (
         <div className='about-hole'>
@@ -16,12 +18,56 @@ const Aboutpage = () => {
         <div className='about-container'>
        <div className='row justify-content-center'>
        <div className='col col-12 col-sm-12 col-md-12 col-lg-4 left-about'>
-       <img src={image} alt='not found'/>
-       <p>Book a visit with Sussie</p>
-       <h3>WORKING HOURS</h3>
+       <img  src={image} alt='not found'/>
+       <p id='book'>Book a visit with Sussie</p>
+       <h4 id='working'>WORKING HOURS</h4>
        <div className='working-hour-con'>
         <div className='working-hour'>
             <h6>MONDAY</h6>
+            <p>08:00-18:30</p>
+            <Link className='timebooking'>
+                <p>Book</p>
+                <BiTime></BiTime>
+
+            </Link>
+        </div>
+       </div>
+       <div className='working-hour-con'>
+        <div className='working-hour'>
+            <h6>TUESDAY</h6>
+            <p>08:00-18:30</p>
+            <Link className='timebooking'>
+                <p>Book</p>
+                <BiTime></BiTime>
+
+            </Link>
+        </div>
+       </div>
+       <div className='working-hour-con'>
+        <div className='working-hour'>
+            <h6>WEDNESDAY</h6>
+            <p>08:00-18:30</p>
+            <Link className='timebooking'>
+                <p>Book</p>
+                <BiTime></BiTime>
+
+            </Link>
+        </div>
+       </div>
+       <div className='working-hour-con'>
+        <div className='working-hour'>
+            <h6>THURSDAY</h6>
+            <p>08:00-18:30</p>
+            <Link className='timebooking'>
+                <p>Book</p>
+                <BiTime></BiTime>
+
+            </Link>
+        </div>
+       </div>
+       <div className='working-hour-con'>
+        <div className='working-hour'>
+            <h6>FRIDAY</h6>
             <p>08:00-18:30</p>
             <Link className='timebooking'>
                 <p>Book</p>
@@ -41,65 +87,22 @@ const Aboutpage = () => {
             </Link>
         </div>
        </div>
-       <div className='working-hour-con'>
-        <div className='working-hour'>
-            <h6>MONDAY</h6>
-            <p>08:00-18:30</p>
-            <Link className='timebooking'>
-                <p>Book</p>
-                <BiTime></BiTime>
-
-            </Link>
-        </div>
-       </div>
-       <div className='working-hour-con'>
-        <div className='working-hour'>
-            <h6>MONDAY</h6>
-            <p>08:00-18:30</p>
-            <Link className='timebooking'>
-                <p>Book</p>
-                <BiTime></BiTime>
-
-            </Link>
-        </div>
-       </div>
-       <div className='working-hour-con'>
-        <div className='working-hour'>
-            <h6>MONDAY</h6>
-            <p>08:00-18:30</p>
-            <Link className='timebooking'>
-                <p>Book</p>
-                <BiTime></BiTime>
-
-            </Link>
-        </div>
-       </div>
-       <div className='working-hour-con'>
-        <div className='working-hour'>
-            <h6>MONDAY</h6>
-            <p>08:00-18:30</p>
-            <Link className='timebooking'>
-                <p>Book</p>
-                <BiTime></BiTime>
-
-            </Link>
-        </div>
-       </div>
-       <p>Contact Sussie</p>
-       <h3>CONTACT INFO</h3>
+       <p className='contact'>Contact Sussie</p>
+       <h4 className='info'>CONTACT INFO</h4>
        <div className='contact-mobile'>
-       <TfiMobile></TfiMobile>
+       <TfiMobile className='mobile-con'></TfiMobile>
        <p>+00025915454</p>
        </div>
        <div className='contact-mobile'>
-       <TfiMobile></TfiMobile>
+       <MdOutlineEmail className='mobile-con'></MdOutlineEmail>
        <p>medica123care@gmail.com</p>
        </div>
        <div className='contact-mobile'>
-       <TfiMobile></TfiMobile>
+       <SlCalender className='mobile-con'></SlCalender>
        <p>Appoinment</p>
        </div>
        </div>
+
        <div className='col col-12 col-sm-12 col-md-12 col-lg-7 right-about'>
        <p id='about-top-text'>A physician/doctor in pediatrics is a medical practitioner that works directly with children. Also known as pediatricians, these doctors collaborate with nurses, X-ray technicians, medical assistants, and other doctors (such as emergency room doctors and surgeons) to treat children.</p>
        <div className='about-bottom-text'>
@@ -133,6 +136,7 @@ const Aboutpage = () => {
             </p>
         </div>
        </div>
+       
        </div>
        </div>
 </div>

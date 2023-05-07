@@ -4,6 +4,7 @@ import './App.css';
 import Main from './Layout/Main';
 import Homepage from './Pages/Homepage/Homepage';
 import Aboutpage from './Pages/Aboutpage/Aboutpage';
+import Blogpages from './Pages/Blogpages/Blogpages';
 
 function App() {
   const router=createBrowserRouter([
@@ -22,6 +23,10 @@ function App() {
         {
           path:'/about',
           element:<Aboutpage></Aboutpage>
+        },
+        {
+          path:'/blog',
+          element:<Blogpages></Blogpages>
         },
         {
           path:'*',
