@@ -1,0 +1,35 @@
+.top-footer{
+    background-image:url('https://img.freepik.com/premium-photo/pathway-lighting_700371-686.jpg?size=626&ext=jpg&ga=GA1.1.1648005366.1676351876&semt=ais');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+}
+.footer-title{
+    text-decoration: none;
+    color: white;
+}
+.foot-item{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+.bottom-footer{
+    border: none;
+    background-color:rgb(36, 34, 34);
+    height: 60px;
+}
+.foot-logo{
+    height: 30px;
+}
+.fill-current{
+    color: white;
+}
+.center{
+    margin: 0 auto;
+
+}
+.center p{
+    color: white;
+}
