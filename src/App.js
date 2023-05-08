@@ -5,6 +5,8 @@ import Main from './Layout/Main';
 import Homepage from './Pages/Homepage/Homepage';
 import Aboutpage from './Pages/Aboutpage/Aboutpage';
 import Blogpages from './Pages/Blogpages/Blogpages';
+import Contactpages from './Pages/Contactpages/Contactpages';
+import Servicespages from './Pages/Servicespages/Servicespages';
 
 function App() {
   const router=createBrowserRouter([
@@ -25,8 +27,16 @@ function App() {
           element:<Aboutpage></Aboutpage>
         },
         {
+          path:'/services',
+          element:<Servicespages></Servicespages>
+        },
+        {
           path:'/blog',
           element:<Blogpages></Blogpages>
+        },
+        {
+          path:'/contact',
+          element:<Contactpages></Contactpages>
         },
         {
           path:'*',

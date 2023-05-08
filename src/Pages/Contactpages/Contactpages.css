@@ -1,0 +1,39 @@
+.contact-hed{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.contact-types{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.times{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.times h6{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.times p{
+    font-size: 1.1rem;
+    color: gray;
+    font-weight: 400;
+}
+.alarm{
+    font-size: 3rem;
+    color: brown;
+}
+.questons-con{
+    width: 70%;
+    margin:  0 auto;
+    margin-bottom: 40px;
+}
+.first-accor{
+    border: none;
+    border-bottom: 1px solid gainsboro;
+}

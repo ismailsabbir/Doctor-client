@@ -1,0 +1,41 @@
+.homeservice-con{
+    width: 95%;
+    /* border: 1px solid brown; */
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+.services-right{
+    background-color: gainsboro;
+    padding: 10px;
+    padding-bottom: 20px;
+}
+.services-right h3{
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.services-right p{
+    font-size: 15px;
+    color: rgb(73, 73, 73);
+    line-height: 1.2;
+    text-align: center;
+    font-weight: 400;
+}
+.working-time{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 2px;
+    margin-bottom: 5px;
+    border-bottom:0.5px solid rgb(164, 162, 162);
+
+}
+.all-service-btn{
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}

@@ -1,0 +1,26 @@
+.subscribe-con{
+    height: 200PX;
+    background-color: gainsboro;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.subscribe-con h1{
+    color: rgb(2, 2, 61);
+}
+.subscribe-email{
+    width: 400px;
+    padding: 8px 10px;
+}
+.suibscribe-btn{
+    margin-left: 10px;
+    border: 1px solid tomato;
+    background-color: tomato;
+    color: white;
+    padding: 8px 5px;
+}
+.sub-condition{
+    margin-top: 15px;
+    font-size: 1rem;
+    font-weight: 400;
+}
