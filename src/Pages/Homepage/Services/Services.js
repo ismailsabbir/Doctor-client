@@ -16,7 +16,7 @@ const Services = (props) => {
         {product.about.slice(0,65)}---
         </Card.Text>
         <div className='card-bottom'>
-            <Link>
+            <Link to={`/servicedetails/${product._id}`}>
             <Button variant="primary">Read more</Button>
             </Link>
             <p>{product.balance}</p>

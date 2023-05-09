@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 const Homeservices = () => {
     const[services,setservices]=useState([]);
-    fetch('http://localhost:5000/services')
+    fetch('https://doctor-server-ismailsabbir.vercel.app/services')
     .then(req=>req.json())
     .then(data=>setservices(data));
     const servic=services.slice(0,3);

@@ -4,7 +4,7 @@ import Services from '../Homepage/Services/Services';
 import Subscribes from './Subscribes/Subscribes';
 const Servicespages = () => {
     const[services,setservices]=useState([]);
-    fetch('http://localhost:5000/services')
+    fetch('https://doctor-server-ismailsabbir.vercel.app/services')
     .then(req=>req.json())
     .then(data=>setservices(data));
     return (

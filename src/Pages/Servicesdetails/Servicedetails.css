@@ -1,0 +1,97 @@
+.servicedetails-container{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+.servicedetails-left{
+    /* border: 1px solid brown; */
+}
+.doc-video{
+    display: flex;
+}
+.documents{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    color: rgb(32, 32, 122);
+    margin-bottom: 10px;
+}
+.documents h6{
+    margin-left: 10px;
+    color: rgb(62, 62, 62);
+}
+#mediacl-serv{
+    color: rgb(15, 123, 123);
+}
+.post-moment{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 5px;
+    border-bottom: 1px solid gainsboro;
+    color: rgb(4, 4, 56);
+}
+.post-moment p{
+    margin-left: 10px;
+    margin-right: 20px;
+    font-size: 1rem;
+    font-weight: 400;
+    color: gray;
+    margin-top: 6px;
+}
+#service-image{
+    width: 100%;
+    height: 400px;
+    margin-bottom: 50px;
+}
+.service-details-text{
+    line-height: 1.3;
+    font-weight: 400;
+    font-size: 1rem;
+    color: rgb(51, 51, 51);
+    text-align: justify;
+    padding-bottom: 10px;
+    border-bottom: 0.5px solid gainsboro;
+}
+.link-social{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    border-bottom: 1px solid gainsboro;
+    padding-bottom: 8px;
+    margin-top: 50px;
+}
+.button-group{
+    display: flex;
+    align-items: center;
+}
+.button-group button{
+    margin-right: 5px;
+    background-color: rgb(14, 78, 78);
+    color: white;
+    padding: 4px 8px;
+}
+.social-icon-con{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.7rem;
+    color: rgb(16, 79, 79);
+
+}
+.service-link{
+    text-decoration: none;
+}
+.serv-link{
+    width: 100%;
+    border: 1px solid gainsboro;
+    color: black;
+    margin-bottom: 10px;
+    font-weight: 400;
+    padding: 8px 15px;
+}
+.message-box{
+    height: 200px;
+}

@@ -1,0 +1,52 @@
+.login-container{
+    /* border: 1px solid brown; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.login-left img{
+    height: 380px;
+    width: 300px;
+    margin-right: 55px;
+}
+.login-right{
+    border: 1px solid gainsboro;
+    padding: 20px;
+    border-radius: 8px;
+    width: 370px;
+}
+.login-right h4{
+    text-align: center;
+}
+.signin-btn{
+    width: 100%;
+    background-color: rgb(2, 100, 100);
+    color: white;
+    border-radius: 6px;
+    padding: 4px 0px;
+    margin-bottom: 20px;
+}
+.another-method-con{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.another-method{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-bottom: 35px;
+}
+.facebok{
+    margin-right: 10px;
+    font-size: 1.3rem;
+}
+.sign-btn{
+    text-decoration: none;
+    color: tomato;
+    font-weight: 600;
+}

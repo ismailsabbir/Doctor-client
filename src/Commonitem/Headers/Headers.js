@@ -22,10 +22,13 @@ const Headers = () => {
             <Link className='nav-item' to='/services'>Services</Link>
             <Link className='nav-item' to='/contact'>Contact</Link>
             <Link className='nav-item' to='/blog'>Blog</Link>
+            <Link className='nav-item' to='/signup'>Signup</Link>
+            <Link className='nav-item' to='/login'>Login</Link>
           </Nav>
         </Navbar.Collapse>
         <Navbar.Collapse className="justify-content-end">
           <Navbar.Text className='social-icons'>
+          <Link  to='/appoinment'><button className='appoinment-btn'>MAKE APPOINMENT</button></Link>
             <TiSocialFacebook className='social-icon'></TiSocialFacebook>
             <TiSocialTwitter className='social-icon'></TiSocialTwitter>
             <MdOutlineWhatsapp className='social-icon'></MdOutlineWhatsapp>

@@ -1,0 +1,10 @@
+.gallary-first{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+.gallary-first img{
+    height: 150px;
+    width: 150px;
+}
