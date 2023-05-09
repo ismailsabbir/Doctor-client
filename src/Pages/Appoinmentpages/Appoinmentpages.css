@@ -1,0 +1,44 @@
+.appoinment-container{
+    width: 85%;
+    height: 100vh;
+    margin: 0 auto;
+    margin-top: 40px;
+    background-image: url('../../../src/images/appoinment1.avif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.appoinment-text{
+    display: flex;
+    align-items: center;
+   
+}
+.appoinment-left{
+    width: 250px;
+    color: white;
+    margin-left: 100px;
+    margin-right: 50px;
+}
+.appoinment-left p{
+    color: white;
+    line-height: 1.1rem;
+    font-weight: 400;
+    font-size: 1rem;
+}
+.appoinment-right{
+    /* border: 1px solid brown; */
+    width: 400px;
+    color:rgb(179, 241, 241);
+    font-weight: 400;
+}
+.appoinment-btn{
+    width: 200px;
+    border: 1px solid darkcyan;
+    padding: 5px 20px;
+    color: white;
+
+}
+.extra{
+    border: 1px solid brown;
+    margin-top: 150px;
+}

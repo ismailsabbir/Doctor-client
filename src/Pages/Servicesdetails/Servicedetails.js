@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Servicedetails.css'
 import { Link, json, useLoaderData } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
@@ -12,9 +12,12 @@ const Servicedetails = () => {
     const[services,setservices]=useState([]);
     const data=useLoaderData();
     // console.log(data);
-    fetch('https://doctor-server-ismailsabbir.vercel.app/services')
-    .then(req=>req.json())
-    .then(res=>setservices(res))
+    useEffect(()=>{
+      fetch('https://doctor-server-ismailsabbir.vercel.app/services')
+      .then(req=>req.json())
+      .then(res=>setservices(res))
+    },[])
+
     const reviewhandler=(event)=>{
         event.preventDefault();
         const name=event.target.name.value;

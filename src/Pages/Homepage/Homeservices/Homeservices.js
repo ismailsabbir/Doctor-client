@@ -1,13 +1,16 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './homeservices.css';
 import Services from '../Services/Services';
 import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 const Homeservices = () => {
     const[services,setservices]=useState([]);
-    fetch('https://doctor-server-ismailsabbir.vercel.app/services')
-    .then(req=>req.json())
-    .then(data=>setservices(data));
+    useEffect(()=>{
+        fetch('https://doctor-server-ismailsabbir.vercel.app/services')
+        .then(req=>req.json())
+        .then(data=>setservices(data));
+    },[])
+
     const servic=services.slice(0,3);
     console.log(servic);
     return (

@@ -1,12 +1,15 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Servicespages.css'
 import Services from '../Homepage/Services/Services';
 import Subscribes from './Subscribes/Subscribes';
 const Servicespages = () => {
     const[services,setservices]=useState([]);
-    fetch('https://doctor-server-ismailsabbir.vercel.app/services')
-    .then(req=>req.json())
-    .then(data=>setservices(data));
+    useEffect(()=>{
+      fetch('https://doctor-server-ismailsabbir.vercel.app/services')
+      .then(req=>req.json())
+      .then(data=>setservices(data));
+    },[])
+
     return (
       <div>
      <div className='services-container'>
