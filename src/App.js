@@ -11,6 +11,7 @@ import Servicedetails from './Pages/Servicesdetails/Servicedetails';
 import Signuppages from './Pages/Signuppages/Signuppages';
 import Loginpages from './Pages/Loginpages/Loginpages';
 import Appoinmentpages from './Pages/Appoinmentpages/Appoinmentpages';
+import PrivetRoutes from './Routes/PrivetRoutes';
 
 function App() {
   const router=createBrowserRouter([

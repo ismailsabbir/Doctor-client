@@ -2,6 +2,7 @@
     width: 80%;
     margin: 0 auto;
     margin-top: 40px;
+    margin-bottom: 30px;
 }
 .servicedetails-left{
     /* border: 1px solid brown; */
@@ -81,17 +82,62 @@
     color: rgb(16, 79, 79);
 
 }
+.services-hed{
+    margin-bottom: 20px;
+    margin-top: 30px;
+    color: darkcyan;
+}
 .service-link{
     text-decoration: none;
 }
 .serv-link{
     width: 100%;
     border: 1px solid gainsboro;
-    color: black;
+    color: white;
+    background-color: tomato;
     margin-bottom: 10px;
     font-weight: 400;
-    padding: 8px 15px;
+    padding: 10px 15px;
 }
 .message-box{
     height: 200px;
+}
+.review-head{
+    /* font-size: 1rem; */
+    margin-bottom: 10px;
+    color: rgb(12, 73, 73);
+}
+.review-container{
+    border-bottom: 1px solid gainsboro;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+}
+.reviewer{
+    display: flex;
+    align-items: center;
+}
+.reviewer h6{
+    font-weight: 400;
+    font-size: -0.8rem;
+    margin-left: 8px;
+}
+.review-sev-det{
+    line-height: 1;
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgb(56, 56, 56);
+    text-align: justify;
+    margin: 8px 0px;
+}
+.revier-ratting-con{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.review-star{
+    display: flex;
+}
+.star-rev{
+    color: gold;
+    margin-left: 4px;
 }

@@ -5,7 +5,7 @@ import loginimg from '../../../src/images/login.svg';
 import { BsFacebook } from "react-icons/bs";
 import { FcGoogle} from "react-icons/fc";
 import { FaMobile } from "react-icons/fa";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/UserContext';
 import Alert from 'react-bootstrap/Alert';
 const Loginpages = () => {
@@ -13,6 +13,7 @@ const Loginpages = () => {
   const[passworderror,setpassworderror]=useState('');
   const[sucessmessage,setsucessmessage]=useState(false);
   const[getemail,setgetemail]=useState('');
+  const navigate=useNavigate();
       const handlelogin=(event)=>{
         event.preventDefault();
         setsucessmessage(false);
@@ -25,6 +26,7 @@ const Loginpages = () => {
           const userinfo=req.user;
           console.log(userinfo);
           setsucessmessage(true);
+          navigate('/home');
         })
         .catch((error)=>{
           setpassworderror(error.message);

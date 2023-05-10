@@ -1,22 +1,32 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './Servicedetails.css'
-import { Link, json, useLoaderData } from 'react-router-dom';
+import { Link, json, useLoaderData, useNavigate } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 // import ImageGallary from './Imagegallary/ImageGallary';
 import { BsFillCameraVideoFill,BsFillChatRightTextFill,BsFacebook,BsWhatsapp } from "react-icons/bs";
 import {AiFillClockCircle,AiFillGoogleCircle,AiFillInstagram,AiFillTwitterCircle} from "react-icons/ai";
-import {FaUserCircle } from "react-icons/fa";
+import {FaUserCircle,FaStar } from "react-icons/fa";
 import {RiMessage3Fill} from "react-icons/ri";
+import { AuthContext } from '../../Context/UserContext';
 const Servicedetails = () => {
+  const{user}=useContext(AuthContext);
     const[services,setservices]=useState([]);
+    const[review,setreview]=useState([]);
     const data=useLoaderData();
+    const navigate=useNavigate();
     // console.log(data);
     useEffect(()=>{
       fetch('https://doctor-server-ismailsabbir.vercel.app/services')
       .then(req=>req.json())
       .then(res=>setservices(res))
-    },[])
+    },[]);
+    useEffect(()=>{
+      fetch(`https://doctor-server-ismailsabbir.vercel.app/review/${data.name}`)
+      .then((req)=>req.json())
+      .then((data)=>setreview(data))
+    },[data.name]);
+    console.log(review);
 
     const reviewhandler=(event)=>{
         event.preventDefault();
@@ -24,9 +34,11 @@ const Servicedetails = () => {
         const email=event.target.email.value;
         const review=event.target.review.value;
         const ratting=event.target.ratting.value;
-        const reviewinfo={name,email,review,ratting};
+        const servicestype=event.target.service.value;
+        const reviewinfo={name,email,review,ratting,servicestype};
         console.log(reviewinfo);
-        fetch('http://localhost:5000/review',{
+        if(user?.uid){
+          fetch('https://doctor-server-ismailsabbir.vercel.app/review',{
             method: 'POST',
             body: JSON.stringify(reviewinfo),
             headers: {
@@ -35,6 +47,11 @@ const Servicedetails = () => {
         })
         .then(req=>req.json())
         .then(data=>console.log(data)) 
+        }
+        else{
+          navigate('/login');
+        }
+
     }
     return (
         <div className='servicedetails-container'>
@@ -82,17 +99,24 @@ const Servicedetails = () => {
 
                 <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Name</Form.Label>
-        <Form.Control type="text" placeholder="Enter name" name='name' />
+        <Form.Control type="text" placeholder="Enter name" name='name' value={user?.displayName} />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>
-        <Form.Control type="email" placeholder="Enter email" name='email' />
+        <Form.Control type="email" placeholder="Enter email" name='email' value={user?.email} />
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicEmail">
       <label for="exampleFormControlTextarea1">Review</label>
     <textarea class="form-control message-box" name='review' id="exampleFormControlTextarea1" rows="3"></textarea>
+      </Form.Group>
+
+      <Form.Group className="mb-3">
+        <Form.Label>What types of services?</Form.Label>
+        <Form.Select name='service'>
+        <option>{data.name}</option>
+        </Form.Select>
       </Form.Group>
       <Form.Group className="mb-3">
         <Form.Label>Service Reatting</Form.Label>
@@ -111,14 +135,32 @@ const Servicedetails = () => {
         Submit
       </Button>
     </Form>
-                </div>
-+
-        </div>
-
+    </div>
+   </div>
 
         <div className='col col-12 col-sm-12 col-md-12 col-lg-3'>
-                <h5>REVIEW</h5>
-                <h5>SERVICES </h5>
+                <h5 className='review-head'>REVIEW</h5>
+                {
+                  review.map(rev=>(
+                    <div className='review-container'>
+                    <div className='reviewer'>
+                      <FaUserCircle></FaUserCircle>
+                      <h6>{rev.name}</h6>
+                    </div>
+                      <p className='review-sev-det'>{rev.review}</p>
+                      <div className='revier-ratting-con'>
+                      <h6>Ratting: {rev.ratting}</h6>
+                      <div className='review-star'>
+                      <FaStar className='star-rev'></FaStar>
+                        <FaStar className='star-rev'></FaStar>
+                        <FaStar className='star-rev'></FaStar>
+                      </div>
+                      </div>
+
+                    </div>
+                  ))
+                }
+                <h5 className='services-hed'>SERVICES </h5>
                 {
                     services.map((serv)=>(
                         <Link className='service-link' to={`/servicedetails/${serv._id}`}><p className='serv-link'>{serv.name}</p></Link>
