@@ -12,7 +12,7 @@ const Homeservices = () => {
     },[])
 
     const servic=services.slice(0,3);
-    console.log(servic);
+    // console.log(servic);
     return (
         <div className='homeservice-con'>
         <div className='row '>

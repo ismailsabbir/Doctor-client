@@ -39,3 +39,10 @@
     color: white;
     margin-right: 10px;
 }
+.user-infor{
+    display: flex;
+    align-items: center;
+}
+.user-icon{
+    margin-right: 8px;
+}

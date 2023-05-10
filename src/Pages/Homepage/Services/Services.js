@@ -5,7 +5,7 @@ import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 const Services = (props) => {
     const product=props.data;
-    console.log(product);
+    // console.log(product);
     return (
         <div className='col col-12 col-sm-12 col-md-12 col-lg-4 service-card'>
          <Card style={{ width: '18rem' }}>
