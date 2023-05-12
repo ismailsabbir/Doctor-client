@@ -1,44 +1,50 @@
 import React, { useContext, useEffect, useState } from 'react';
-import './Appoinmentpages.css';
+import { Link, useLoaderData, Navigate, useNavigate } from 'react-router-dom';
 import Form from 'react-bootstrap/Form';
 import { AuthContext } from '../../Context/UserContext';
-import { Link, useNavigate } from 'react-router-dom';
-const Appoinmentpages = () => {
-    const [services,setservices]=useState([]);
-    const{user}=useContext(AuthContext);
-    const navigate=useNavigate();
-    useEffect(()=>{
-        fetch('https://doctor-server-ismailsabbir.vercel.app/services')
-        .then(req=>req.json())
-        .then(data=>setservices(data));
-    },[])
 
-    console.log(services);
-    const appoinmenthandle=(event)=>{
-        event.preventDefault();
+const AppoinmentChanges = () => {
+  const storeappoinment=useLoaderData();
+  console.log(storeappoinment);
+  const [newappoinmentdata,setnewappoinment]=useState(storeappoinment);
+    const{user}=useContext(AuthContext);
+  const navigate=useNavigate();
+  console.log(user)
+    const appoinment=useLoaderData();
+    console.log(appoinment);
+    const[services,setservices]=useState([]);
+    useEffect(()=>{
+      fetch('https://doctor-server-ismailsabbir.vercel.app/services')
+      .then(req=>req.json())
+      .then(data=>setservices(data));
+  },[]);
+  console.log(services);
+  const handleupdate=(event)=>{
+    event.preventDefault();
     const name=event.target.name.value;
     const email=event.target.email.value;
     const date=event.target.date.value;
     const servicestype=event.target.service.value;
     const appoiment={name,email,date,servicestype};
-    if(user?.uid){
-      fetch('https://doctor-server-ismailsabbir.vercel.app/appoinment',{
-        method: 'POST',
-        body: JSON.stringify(appoiment),
-        headers: {
-          'Content-Type': 'application/json'
-        }
-    })
-    .then((req)=>req.json())
-    .then(data=>console.log(data))
     console.log(appoiment);
-    navigate('/appoinmentdetails')
+    if(user?.uid){
+      fetch(`https://doctor-server-ismailsabbir.vercel.app/appoinment/${appoinment._id}`,{
+        method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(appoiment)
+      })
+      .then(req=>req.json())
+      .then(data=>{console.log(data);
+      const newappoinment=[...newappoinmentdata,data];
+      setnewappoinment(newappoinment);
+      })
+      navigate('/appoinmentdetails');
     }
     else{
       navigate('/login');
     }
 
-    }
+  }
     return (
         <div>
         <div className='appoinment-container'>
@@ -52,14 +58,14 @@ const Appoinmentpages = () => {
                 </p>
             </div>
             <div className='appoinment-right'>
-            <Form onSubmit={appoinmenthandle}>
+            <Form onSubmit={handleupdate}>
             <Form.Group className="mb-3">
         <Form.Label>Enter name</Form.Label>
-        <Form.Control placeholder="Name" type='text' name='name'/>
+        <Form.Control placeholder="Name" type='text' name='name' defaultValue={user.displayName}/>
       </Form.Group>
       <Form.Group className="mb-3">
         <Form.Label>Enter email</Form.Label>
-        <Form.Control placeholder="Email" type='email' name='email' value={user.email}/>
+        <Form.Control placeholder="Email" type='email' name='email' defaultValue={user.email}/>
       </Form.Group>
       <Form.Group className="mb-3">
         <Form.Label>What types of services?</Form.Label>
@@ -71,12 +77,13 @@ const Appoinmentpages = () => {
           }
         </Form.Select>
       </Form.Group>
+
       <Form.Group className="mb-3">
         <Form.Label>Selected Date</Form.Label>
         <Form.Control className='date-input'  type='date' name='date'/>
       </Form.Group>
 
-      <input className='appoinment-btn' type="submit" value="Make Appoinment"/>
+      <input className='appoinment-btn' type="submit" value="Update Appoinment"/>
       <Link to='/appoinmentdetails'> <button className='appoinment-btn'> Your Appoinment</button></Link>
             </Form>
             </div>
@@ -87,8 +94,7 @@ const Appoinmentpages = () => {
 
         </div>
         </div>
-
     );
 };
 
-export default Appoinmentpages;
+export default AppoinmentChanges;

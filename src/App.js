@@ -14,6 +14,9 @@ import Appoinmentpages from './Pages/Appoinmentpages/Appoinmentpages';
 import PrivetRoutes from './Routes/PrivetRoutes';
 import Myreviewpages from './Pages/Myreviewpages/Myreviewpages';
 import AddServices from './Pages/AddServices/AddServices';
+import Appoinmentdetails from './Pages/Appoinmentdetails/Appoinmentdetails';
+import ReviewUpdatePages from './Pages/ReviewUpdatePages/ReviewUpdatePages';
+import AppoinmentChanges from './Pages/AppoinmentChanges/AppoinmentChanges';
 
 function App() {
   const router=createBrowserRouter([
@@ -49,6 +52,13 @@ function App() {
           element:<PrivetRoutes><Myreviewpages></Myreviewpages></PrivetRoutes>
         },
         {
+          path:'/updatereview/:id',
+          element:<ReviewUpdatePages></ReviewUpdatePages>,
+          loader:async({params})=>{
+            return fetch(`https://doctor-server-ismailsabbir.vercel.app/review/${params.id}`)
+          }
+        },
+        {
           path:'/addservices',
           element:<AddServices></AddServices>
         },
@@ -71,6 +81,17 @@ function App() {
         {
           path:'/appoinment',
           element:<Appoinmentpages></Appoinmentpages>
+        },
+        {
+          path:'/appoinmentupdate/:id',
+          element:<AppoinmentChanges></AppoinmentChanges>,
+          loader:({params})=>{
+            return fetch(`https://doctor-server-ismailsabbir.vercel.app/appoinment/${params.id}`)
+          }
+        },
+        {
+          path:'/appoinmentdetails',
+          element:<Appoinmentdetails></Appoinmentdetails>
         },
         {
           path:'*',

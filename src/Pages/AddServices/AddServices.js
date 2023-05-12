@@ -3,6 +3,7 @@ import './AddServices.css';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Storeservices from '../Storeservices/Storeservices';
+import Swal from 'sweetalert2';
 // import images from '../../../src/images/add.jpg';
 // import FloatingLabel from 'react-bootstrap/FloatingLabel';
 const AddServices = () => {
@@ -30,7 +31,15 @@ const AddServices = () => {
             }
         })
         .then((req)=>req.json())
-        .then(data=>console.log(data))
+        .then(data=>{
+          console.log(data);
+          Swal.fire(
+            'Good job!',
+            'You product added Sucessfuly !',
+            'success'
+          )
+          
+        })
     }
     return (
       <div>

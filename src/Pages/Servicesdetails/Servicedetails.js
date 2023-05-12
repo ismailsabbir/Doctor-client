@@ -9,6 +9,7 @@ import {AiFillClockCircle,AiFillGoogleCircle,AiFillInstagram,AiFillTwitterCircle
 import {FaUserCircle,FaStar } from "react-icons/fa";
 import {RiMessage3Fill} from "react-icons/ri";
 import { AuthContext } from '../../Context/UserContext';
+import Swal from 'sweetalert2';
 const Servicedetails = () => {
   const{user}=useContext(AuthContext);
     const[services,setservices]=useState([]);
@@ -46,7 +47,15 @@ const Servicedetails = () => {
             }
         })
         .then(req=>req.json())
-        .then(data=>console.log(data)) 
+        .then(data=>{
+          console.log(data);
+          Swal.fire(
+            'Good job!',
+            'You review added Sucessfuly !',
+            'success'
+          );
+          navigate('/myreview');
+        }) 
         }
         else{
           navigate('/login');

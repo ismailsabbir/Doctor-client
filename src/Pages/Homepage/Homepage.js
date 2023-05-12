@@ -6,7 +6,7 @@ import Homeservices from './Homeservices/Homeservices';
 const Homepage = () => {
     return (
         <div>
-<Homebanner></Homebanner>
+        <Homebanner></Homebanner>
 <Providecare></Providecare>
 <Homeservices></Homeservices>
         </div>

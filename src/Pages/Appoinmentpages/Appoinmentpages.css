@@ -31,8 +31,14 @@
     color:rgb(179, 241, 241);
     font-weight: 400;
 }
+/* .date-input{
+    border: 1px solid brown;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+} */
 .appoinment-btn{
-    width: 200px;
+    /* width: 200px; */
     border: 1px solid darkcyan;
     padding: 5px 20px;
     color: white;

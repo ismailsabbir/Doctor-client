@@ -1,5 +1,20 @@
+.review-details-hed{
+    width: 80%;
+    margin: 0 auto;
+    background-image:url('../../images/details.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    color: white;
+    margin-top: 40px;
+}
 .specific-review-container{
-    width: 60%;
+    width: 80%;
     margin: 0 auto;
     border: 1px solid gainsboro;
     margin-top: 40px;

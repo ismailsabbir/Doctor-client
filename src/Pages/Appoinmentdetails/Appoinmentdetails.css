@@ -1,0 +1,30 @@
+.appoinment-details-con{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.apoinmentdetail-hed{
+    background-image:url('../../images/details.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.appoinment-details-con h1{
+    margin-bottom: 20px;
+    color: white;
+}
+
+.appoinment-edit{
+    border: 1px solid darkcyan;
+    padding: 4px 10px;
+    background-color: darkcyan;
+    color: white;
+    font-weight: 400;
+    border-radius: 8px;
+}

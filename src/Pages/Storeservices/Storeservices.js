@@ -25,7 +25,6 @@ const Storeservices = (props) => {
       .then(req=>req.json())
       .then(data=>{
         console.log(data);
-        // alert('Services Add Sucessfull');
         Swal.fire(
           'Good job!',
           'You product added Sucessfuly !',
