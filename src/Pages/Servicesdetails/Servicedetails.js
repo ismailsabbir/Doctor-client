@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import './Servicedetails.css'
-import { Link, json, useLoaderData, useNavigate } from 'react-router-dom';
+import { Link, useLoaderData, useNavigate } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 // import ImageGallary from './Imagegallary/ImageGallary';
@@ -15,7 +15,7 @@ const Servicedetails = () => {
     const[review,setreview]=useState([]);
     const data=useLoaderData();
     const navigate=useNavigate();
-    // console.log(data);
+    console.log(data);
     useEffect(()=>{
       fetch('https://doctor-server-ismailsabbir.vercel.app/services')
       .then(req=>req.json())

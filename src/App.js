@@ -12,6 +12,8 @@ import Signuppages from './Pages/Signuppages/Signuppages';
 import Loginpages from './Pages/Loginpages/Loginpages';
 import Appoinmentpages from './Pages/Appoinmentpages/Appoinmentpages';
 import PrivetRoutes from './Routes/PrivetRoutes';
+import Myreviewpages from './Pages/Myreviewpages/Myreviewpages';
+import AddServices from './Pages/AddServices/AddServices';
 
 function App() {
   const router=createBrowserRouter([
@@ -41,6 +43,14 @@ function App() {
           loader:async({params})=>{
             return fetch(`https://doctor-server-ismailsabbir.vercel.app/services/${params.id}`)
           }
+        },
+        {
+          path:'/myreview',
+          element:<PrivetRoutes><Myreviewpages></Myreviewpages></PrivetRoutes>
+        },
+        {
+          path:'/addservices',
+          element:<AddServices></AddServices>
         },
         {
           path:'/blog',

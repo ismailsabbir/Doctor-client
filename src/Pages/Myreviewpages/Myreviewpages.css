@@ -1,0 +1,77 @@
+.specific-review-container{
+    width: 60%;
+    margin: 0 auto;
+    border: 1px solid gainsboro;
+    margin-top: 40px;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+.number-review{
+    color: darkcyan;
+}
+.single-rev-con{
+    border-bottom: 1px solid gainsboro;
+    padding-bottom: 15px;
+}
+.single-review{
+
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.single-revwer{
+    width: 150px;
+    /* border: 1px solid gray; */
+    display: flex;
+    align-items: center;
+}
+.single-review h6{
+    margin-left: 10px;
+}
+.review-type-review{
+    display: flex;
+    /* border: 1px solid brown; */
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+}
+.review-type-review h6{
+    color: darkcyan;
+}
+.review-type-review p{
+    text-align: justify;
+    line-height: 1rem;
+    /* color: rgb(54, 54, 54); */
+    font-size: 1rem;
+    font-weight: 400;
+    margin-left: 20px;
+}
+.single-review-star{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.single-review-star p{
+    font-size: 1rem;
+    font-weight: 500;
+    color: brown;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.star{
+    color: gold;
+    font-size: 1.2rem;
+}
+.review-detate-edit{
+    text-align: center;
+    margin-top: 10px;
+}
+.review-detate-edit button{
+    border: 1px solid skyblue;
+    background-color: darkcyan;
+    color: white;
+    border-radius: 4px;
+    margin-right: 10px;
+    padding: 5px 10px;
+}

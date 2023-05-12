@@ -1,8 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './Appoinmentpages.css';
 import Form from 'react-bootstrap/Form';
+import { AuthContext } from '../../Context/UserContext';
+import { useNavigate } from 'react-router-dom';
 const Appoinmentpages = () => {
     const [services,setservices]=useState([]);
+    const{user}=useContext(AuthContext);
+    const navigate=useNavigate();
     useEffect(()=>{
         fetch('https://doctor-server-ismailsabbir.vercel.app/services')
         .then(req=>req.json())
@@ -17,7 +21,8 @@ const Appoinmentpages = () => {
     const date=event.target.date.value;
     const servicestype=event.target.service.value;
     const appoiment={name,email,date,servicestype};
-    fetch('https://doctor-server-ismailsabbir.vercel.app/appoinment',{
+    if(user?.uid){
+      fetch('https://doctor-server-ismailsabbir.vercel.app/appoinment',{
         method: 'POST',
         body: JSON.stringify(appoiment),
         headers: {
@@ -27,6 +32,11 @@ const Appoinmentpages = () => {
     .then((req)=>req.json())
     .then(data=>console.log(data))
     console.log(appoiment);
+    }
+    else{
+      navigate('/login');
+    }
+
     }
     return (
         <div>

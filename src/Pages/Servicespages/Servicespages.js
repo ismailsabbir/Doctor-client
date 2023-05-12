@@ -4,6 +4,7 @@ import Services from '../Homepage/Services/Services';
 import Subscribes from './Subscribes/Subscribes';
 const Servicespages = () => {
     const[services,setservices]=useState([]);
+    console.log(services);
     useEffect(()=>{
       fetch('https://doctor-server-ismailsabbir.vercel.app/services')
       .then(req=>req.json())

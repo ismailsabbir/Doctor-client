@@ -34,11 +34,18 @@ const Headers = () => {
             <Link className='nav-item' to='/services'>Services</Link>
             <Link className='nav-item' to='/contact'>Contact</Link>
             <Link className='nav-item' to='/blog'>Blog</Link>
-            <Link className='nav-item' to='/signup'>Signup</Link>
+
             {
               user?.email? 
-              <Link className='nav-item' onClick={handlelogout} >LogOut</Link>:
+              <div>
+              <Link className='nav-item' to='/myreview'>My Review</Link>
+              <Link className='nav-item' to='/addservices'>Add Services</Link>
+              <Link className='nav-item' to='/signup'>Signup</Link>
+              <Link className='nav-item' onClick={handlelogout} >LogOut</Link>
+
+              </div>:
               <Link className='nav-item' to='/login'>Login</Link>
+
             }
 
 
