@@ -16,7 +16,6 @@ const Servicedetails = () => {
     const[review,setreview]=useState([]);
     const data=useLoaderData();
     const navigate=useNavigate();
-    console.log(data);
     useEffect(()=>{
       fetch('https://doctor-server-ismailsabbir.vercel.app/services')
       .then(req=>req.json())
@@ -27,7 +26,6 @@ const Servicedetails = () => {
       .then((req)=>req.json())
       .then((data)=>setreview(data))
     },[data.name]);
-    console.log(review);
 
     const reviewhandler=(event)=>{
         event.preventDefault();
@@ -37,7 +35,6 @@ const Servicedetails = () => {
         const ratting=event.target.ratting.value;
         const servicestype=event.target.service.value;
         const reviewinfo={name,email,review,ratting,servicestype};
-        console.log(reviewinfo);
         if(user?.uid){
           fetch('https://doctor-server-ismailsabbir.vercel.app/review',{
             method: 'POST',
@@ -140,7 +137,7 @@ const Servicedetails = () => {
         <Form.Check type="checkbox" label="Accept terms and condition" />
       </Form.Group>
       
-      <Button variant="primary" type="submit">
+      <Button className='small-review-btn' variant="primary" type="submit">
         Submit
       </Button>
     </Form>

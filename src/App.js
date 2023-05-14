@@ -101,7 +101,7 @@ function App() {
     }
   ])
   return (
-    <div>
+    <div className='main'>
     <RouterProvider router={router}/>
     </div>
   );

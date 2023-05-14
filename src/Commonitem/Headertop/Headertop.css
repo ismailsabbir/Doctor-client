@@ -53,3 +53,8 @@ p{
 .nav-bar-text{
     margin-top: 10px;
 }
+@media only screen and (max-width:688px){
+    .navbar-top-container{
+        display: none;
+    }
+}

@@ -17,7 +17,7 @@ const Homeservices = () => {
         <div className='homeservice-con'>
         <div className='row '>
         <div className='col col-12 col-sm-12 col-md-12 col-lg-9'>
-        <div className='row'>
+        <div className='row small-device-row'>
         {
          servic.map((service)=>(
         <Services data={service}></Services>

@@ -1,14 +1,10 @@
 import React from 'react';
 import './Homebanner.css';
 import Carousel from 'react-bootstrap/Carousel';
-// import image from '../../../images/bannerl.avif';
-// import image1 from '../../../images/dark2.avif';
-// import image2 from '../../../images/dark3.avif';
 import image4 from '../../../images/newbanner.jpg';
 import image5 from '../../../images/newbanner2.jpg';
 import image6 from '../../../images/newbanner3.jpg';
 import { Link } from 'react-router-dom';
-
 const Homebanner = () => {
     return (
         <div className='home-banner-container'>

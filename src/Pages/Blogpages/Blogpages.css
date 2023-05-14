@@ -97,3 +97,17 @@
 /* #galary-mid{
     width: 250px;
 } */
+@media only screen and (max-width:688px){
+    .blog-head h1{
+        font-size: 1rem;
+    }
+    .blog-container{
+        margin-top: 90px;
+    }
+    /* .galary{
+        display: none;
+    } */
+    .galary1 img{
+        width: 100px;
+    }
+}

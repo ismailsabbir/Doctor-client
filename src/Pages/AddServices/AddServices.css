@@ -48,3 +48,13 @@
 .services-add-btn{
     width: 100%;
 }
+@media only screen and (max-width:688px){
+    .add-services-small{
+        /* border: 1px solid brown; */
+        width: 95%;
+        margin: 0 auto;
+    }
+    .add-services-container{
+        width: 90%;
+    }
+}

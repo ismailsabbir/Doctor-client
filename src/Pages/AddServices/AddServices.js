@@ -4,8 +4,6 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Storeservices from '../Storeservices/Storeservices';
 import Swal from 'sweetalert2';
-// import images from '../../../src/images/add.jpg';
-// import FloatingLabel from 'react-bootstrap/FloatingLabel';
 const AddServices = () => {
   const[storeservices,setstoreservices]=useState([]);
   useEffect(()=>{
@@ -22,7 +20,6 @@ const AddServices = () => {
         const picture=event.target.image.value;
         const balance=event.target.price.value;
         const servicesinfo={name,about,picture,balance};
-        console.log(servicesinfo);
         fetch('https://doctor-server-ismailsabbir.vercel.app/services',{
             method: 'POST',
             body: JSON.stringify(servicesinfo),
@@ -45,7 +42,7 @@ const AddServices = () => {
       <div>
       <h3 className='new-services-hed'>New Services</h3>
               <div className='stored-product-continer'>
-        <div className='addableservices row'>
+        <div className='addableservices row add-services-small'>
           {
             storeservices.map((services)=>(
               <Storeservices services={services} key={services._id}></Storeservices>

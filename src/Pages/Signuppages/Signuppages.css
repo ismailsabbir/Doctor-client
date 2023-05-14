@@ -50,3 +50,13 @@
     color: tomato;
     font-weight: 600;
 }
+@media only screen and (max-width:688px){
+    .login-left{
+        display: none;
+    }
+    .login-container{
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}

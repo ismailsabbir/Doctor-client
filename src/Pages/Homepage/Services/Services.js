@@ -8,7 +8,7 @@ const Services = (props) => {
     // console.log(product);
     return (
         <div className='col col-12 col-sm-12 col-md-12 col-lg-4 service-card'>
-         <Card style={{ width: '18rem' }}>
+         <Card className='small-card' style={{ width: '18rem' }}>
       <Card.Img variant="top" className='service-image' src={product.picture} />
       <Card.Body>
         <Card.Title>{product.name}</Card.Title>

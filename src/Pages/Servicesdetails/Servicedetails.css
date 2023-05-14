@@ -141,3 +141,18 @@
     color: gold;
     margin-left: 4px;
 }
+@media only screen and (max-width:688px){
+    .post-moment p{
+        line-height: 1rem;
+    }
+    .link-social{
+        display:flex;
+        flex-direction: column;
+    }
+    .button-group{
+        margin-bottom: 20px;
+    }
+    .small-review-btn{
+        width: 100%;
+    }
+}

@@ -14,7 +14,6 @@ const Storeservices = (props) => {
     const name=specificdata.name;
     const about=specificdata.about;
     const dataa={balance,picture,name,about};
-    console.log(dataa);
           fetch('https://doctor-server-ismailsabbir.vercel.app/services',{
           method: 'POST',
           body: JSON.stringify(dataa),

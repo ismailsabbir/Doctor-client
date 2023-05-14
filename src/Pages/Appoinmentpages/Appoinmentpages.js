@@ -76,8 +76,8 @@ const Appoinmentpages = () => {
         <Form.Control className='date-input'  type='date' name='date'/>
       </Form.Group>
 
-      <input className='appoinment-btn' type="submit" value="Make Appoinment"/>
-      <Link to='/appoinmentdetails'> <button className='appoinment-btn'> Your Appoinment</button></Link>
+      <input className='appoinment-btn make-small-appoi' type="submit" value="Make Appoinment"/>
+      <Link to='/appoinmentdetails'> <button className='appoinment-btn make-small-appoi'> Your Appoinment</button></Link>
             </Form>
             </div>
 

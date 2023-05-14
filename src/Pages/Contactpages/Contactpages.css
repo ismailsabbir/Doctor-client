@@ -37,3 +37,10 @@
     border: none;
     border-bottom: 1px solid gainsboro;
 }
+@media only screen and (max-width:688px){
+    .contact-types{
+        display: flex;
+        flex-direction: column;
+        margin-top: 120px;
+    }
+}

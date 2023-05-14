@@ -16,6 +16,7 @@ const Providecare = () => {
         </div>
 
         </div>
+        
         <div className='care-right'>
         <h6 id='what-do'>WHAT WE DO</h6>
         <h1 id='health-care'>We provide top quality healthcare.</h1>

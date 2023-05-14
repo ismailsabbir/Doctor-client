@@ -4,9 +4,6 @@
     margin-top: 40px;
 }
 .service-head{
-    /* margin-bottom: 30px;
-    color: rgb(7, 7, 93);
-    text-align: center; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -46,4 +43,16 @@
 }
 .services-banner h6{
     margin-top: 25px;
+}
+@media only screen and (max-width:688px){
+    .service-head{
+        display: flex;
+        flex-direction: column;
+    }
+    .services-head-left{
+        width: 100%;
+    }
+    .services-head-right{
+        width: 100%;
+    }
 }

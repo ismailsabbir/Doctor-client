@@ -5,13 +5,11 @@ import { AuthContext } from '../../Context/UserContext';
 
 const AppoinmentChanges = () => {
   const storeappoinment=useLoaderData();
-  console.log(storeappoinment);
   const [newappoinmentdata,setnewappoinment]=useState(storeappoinment);
     const{user}=useContext(AuthContext);
   const navigate=useNavigate();
   console.log(user)
     const appoinment=useLoaderData();
-    console.log(appoinment);
     const[services,setservices]=useState([]);
     useEffect(()=>{
       fetch('https://doctor-server-ismailsabbir.vercel.app/services')

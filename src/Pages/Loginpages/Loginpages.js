@@ -19,7 +19,6 @@ const Loginpages = () => {
         setsucessmessage(false);
         const email=event.target.email.value;
         const password=event.target.password.value;
-        console.log(email,password);
         setpassworderror('');
         signinwithemail(email,password)
         .then(req=>{

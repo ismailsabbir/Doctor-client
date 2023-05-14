@@ -1,25 +1,20 @@
 .home-banner-container{
     width: 100%;
     height: 550px;
-    /* margin-bottom: 150px; */
 }
-
 .carouselss{
     width: 100%;
     height: 550px;
 }
-
 .c-item{
     width: 100%;
     height: 100%;
     position: relative;
 }
-
 .carousel-text{
     position: absolute;
     top: 18%;
     left: 0;
-    /* border: 1px solid white; */
     width: 30%;
     height: 270px;
 
@@ -27,16 +22,13 @@
 .carousel-text h1{
     text-align: left;
     font-size: 3.3rem;
-    
 }
 .carousel-text p{
     text-align: left;
     color: white;
     line-height: 2;
     font-size: 1.4rem;
-    /* color: rgb(249, 248, 248); */
 }
-
 .c-image{
     width: 100%;
     height: 550px
@@ -44,9 +36,7 @@
 .home-btn{
     background-color:rgb(53, 134, 134);
     padding: 8px 15px;
-    color: white;
-    
-    
+    color: white;  
 }
 .c-item::before{
     content: ' ';
@@ -57,4 +47,42 @@
     height: 100%;
     display: inline-block;
     background: linear-gradient(to right ,#515151 0%,rgba(81, 81, 81, 0)100%);
+}
+@media only screen and (max-width:688px){
+    .home-banner-container{
+        /* border: 5px solid brown; */
+        width: 100%;
+        height: 250px;
+    }
+    .carouselss{
+        height: 250px;
+        /* border: 1px solid green; */
+    }
+    .c-item{
+        height: 250px;
+        /* border: 2px solid darkblue; */
+    }
+    .c-image{
+        height: 100%;
+        width: 100%;
+    }
+    .carousel-text h1{
+        text-align: left;
+        font-size: 1.3rem;
+        
+    }
+    .carousel-text{
+        width: 60%;
+        height: auto;
+        /* border: 1px solid brown; */
+        margin: 0 auto;
+    }
+    .carousel-text p{
+        display: none;
+        text-align: left;
+        color: white;
+        line-height: 2;
+        font-size: 1rem;
+        /* color: rgb(249, 248, 248); */
+    }
 }

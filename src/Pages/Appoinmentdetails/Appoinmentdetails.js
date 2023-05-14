@@ -4,19 +4,16 @@ import { AuthContext } from '../../Context/UserContext';
 import Table from 'react-bootstrap/Table';
 import { Link } from 'react-router-dom';
 const Appoinmentdetails = () => {
+  const {user}=useContext(AuthContext);
     const [appoinment,setappoinment]=useState([]);
-    console.log(appoinment);
-    const {user}=useContext(AuthContext);
-
     useEffect(()=>{
         fetch(`https://doctor-server-ismailsabbir.vercel.app/appoinment?email=${user.email}`)
         .then(req=>req.json())
         .then(data=>setappoinment(data))
     },[user.email]);
- 
     const[displayappoinment,setdisplayappoinment]=useState(appoinment);
-    console.log(displayappoinment);
     const delateappoinment=(dataaa)=>{
+
       console.log(dataaa);
       const agree=window.confirm('Delate Appoinment ???');
       if(agree){
@@ -29,9 +26,9 @@ const Appoinmentdetails = () => {
           if(data.deletedCount>0){
             alert('delated');
           }
-          const remingappoinment=displayappoinment.filter(appoin=>appoin._id !== dataaa._id);
-          console.log(remingappoinment);
-          setdisplayappoinment(remingappoinment);
+          // const remingappoinment=displayappoinment.filter(appoin=>appoin._id !== dataaa._id);
+          // console.log(remingappoinment);
+          // setdisplayappoinment(remingappoinment);
         })
       }
     }
@@ -41,7 +38,7 @@ const Appoinmentdetails = () => {
         <h1>Appoinment dttails</h1>
         </div>
 
-            <Table striped bordered hover>
+            <Table striped bordered hover class="table" responsive="sm">
       <thead>
         <tr>
 

@@ -130,3 +130,27 @@
     width: 45%;
     
 }
+@media only screen and (max-width:688px){
+    .about-hole{
+        position: relative;
+        margin-bottom:2800px;
+    }
+    .about-container{
+        position: absolute;
+        left: 10px;
+        width: 100%;
+    }
+    #about-top-text{
+        padding: 20px;
+    }
+    .about-bottom-text{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .about-botom-left{
+        /* border: 1px solid brown; */
+        width: 90%;
+        text-align: center;
+    }
+}

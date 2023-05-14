@@ -39,3 +39,15 @@
     margin-bottom: 20px;
 
 }
+@media only screen and (max-width:688px){
+    .small-device-row{
+        width: 90%;
+        /* border: 1px solid brown; */
+        padding-left: 20px;
+        
+    }
+    .services-right{
+        width: 80%;
+        margin: 0 auto;
+    }
+}

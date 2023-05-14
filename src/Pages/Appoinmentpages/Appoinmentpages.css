@@ -31,12 +31,7 @@
     color:rgb(179, 241, 241);
     font-weight: 400;
 }
-/* .date-input{
-    border: 1px solid brown;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-} */
+
 .appoinment-btn{
     /* width: 200px; */
     border: 1px solid darkcyan;
@@ -47,4 +42,22 @@
 .extra{
     border: 1px solid brown;
     margin-top: 150px;
+}
+@media only screen and (max-width:688px){
+    .appoinment-container{
+        width: 90%;
+    }
+    .appoinment-text{
+        display: flex;
+        flex-direction: column;
+    }
+    .appoinment-right{
+        width: 90%;
+        margin:0 auto;
+    }
+    .make-small-appoi{
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }

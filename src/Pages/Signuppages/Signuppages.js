@@ -12,7 +12,6 @@ const Signuppages = () => {
   const[passworderror,setpassworderror]=useState('');
   const[sucess,setsucess]=useState(false);
   const{user,createuser,signupwithgoogle,updateusername}=useContext(AuthContext);
-  console.log(user);
     const handleregister=(event)=>{
       setsucess(false);
         event.preventDefault();
